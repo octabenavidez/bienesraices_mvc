@@ -1,0 +1,62 @@
+.titulo-anuncios{
+    margin-bottom: 0;
+}
+
+.contenedor-anuncios{
+
+    @include tablet{
+        @include grid(3, 2rem);
+    }
+}
+
+.anuncio{
+    background-color: lighten($gris, 5);
+    border: 1px solid darken($gris, 4);
+    margin-top: 1.5rem;
+
+    .contenido-anuncio{
+        padding: 2rem;
+    }
+
+    h3, p{
+        margin: 0;
+    }
+
+    // .parrafo-propiedad{  
+    //     max-width: 40rem;
+    //     overflow: auto;
+    // }
+}
+
+
+.precio{
+    color: $verde;
+    font-weight: $bold;
+    font-size: 3rem;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    &.icono-anuncio{
+        li{
+            padding: 0 5rem;
+        }
+        li:nth-child(1){
+            padding: 0 5rem 0 0;
+        }
+    }
+
+    li{
+        padding: 1rem;
+        display: flex;
+        img{
+            margin-right: 1rem;
+        }
+        p{
+            font-weight: $black;
+        }
+    }
+}
